@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 
 //mongo connection
-mongoose.connect("mongodb://localhost/kolo", { useNewUrlParser: true, useUnifiedTopology: true },
+const url = process.env.MONGO_URI
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true },
     (err) => {
        if (err) throw err;
        console.log("connected to dB!");
