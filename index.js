@@ -20,6 +20,9 @@ app.use(express.json({ extended: true}));
 app.use(cors());
 
 app.use('/record', recordRoute);
+app.get("/", (req, res) => {
+   res.send("Welcome to myKOLO Api!")
+});
 
 
 //listen
