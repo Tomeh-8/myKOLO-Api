@@ -12,7 +12,7 @@ exports.getRecords = async (req, res) => {
 
 exports.postRecord = async (req, res) => {
     try {
-      const { message, amount } = req.body;
+      const { message, amount, userID } = req.body;
   
       const record = await Record.create(req.body);
     

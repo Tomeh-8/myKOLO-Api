@@ -10,6 +10,9 @@ const RecordSchema = new mongoose.Schema({
     type: Number,
     required: [true, 'Please add amount']
   },
+  userID:{
+    type: String
+  },
   createdAt: {
     type: Date,
     default: Date.now
